@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Conufiguration xmlns="http://logging.apache.org/log4/2.0/config">
+	<Properties>
+		<Property name="basePath">logs</Property>
+	</Properties>
+	<Appenders>
+		<!-- File Appender-->
+		<File name="FILE" fileName="${basePath}/logfile.log" append="true">
+			<PatternLayout pattern="%-5p | %d{yyyy:MM:dd HH:mm::ss} | {%t} %C{2} {%F:%L} - %m%n" />
+		</File>
+		<!-- Console Appender-->
+		<Console name="STD_OUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%-5p | %d{yyyy:MM:dd HH:mm::ss} | {%t} %C{2} {%F:%L} - %m%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.jcg" level="info"/>
+		<Root level="info">
+			<AppenderRef ref="STD_OUT" />
+			<AppenderRef ref="FILE"/>
+		</Root>
+    </Loggers></Conufiguration>
