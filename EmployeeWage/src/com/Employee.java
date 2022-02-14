@@ -11,19 +11,32 @@ public class Employee {
 	
 	void employeeAttendance() {
 		
-		if(isPresent == 1) 
-			System.out.println("Employee Present today");
-		else
+		switch(isPresent) {	
+		case 0:
 			System.out.println("Employee Absent today");
-		
+			break;
+		case 1:
+			System.out.println("Employee Present today");
+			break;
+		}
 	}
 	
 	void employeeWage() {
 		
-		if(isPresent == 1) 
-			salary = salary + (WAGE_PER_HOUR * ((isPartTime == 1) ? PART_TIME_HOUR : FULL_TIME_HOUR ));
+		switch(isPresent) {	
+		case 0:
+			break;
+		case 1:
+			switch(isPartTime) {
+			case 0:
+				salary = WAGE_PER_HOUR * FULL_TIME_HOUR;
+				break;
+			case 2:
+				salary = WAGE_PER_HOUR * PART_TIME_HOUR;
+				break;
+			}			
+		}
 		System.out.println("Employee wage is " + salary);
-	
 	}
 
 }
