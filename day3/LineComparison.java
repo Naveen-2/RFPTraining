@@ -7,20 +7,15 @@ public class LineComparison {
 		double q1 = 2.0, q2 = 6.0;
 		double p3 = 2.0, p4 = 3.0;
 		double q3 = 2.0, q4 = 4.0;
-		double p5 = 3.0, q5 = 9.0;
-		double p6 = 4.0, q6 = 12.0;
 
 		System.out.println("Welcome to Line Comparsion Computation Program on Main Branch");
 		double line1 = Math.sqrt((p2 - p1) * (p2 - p1) + (q2 - q1) * (q2 - q1));
 		double line2 = Math.sqrt((p4 - p3) * (p4 - p3) + (q4 - q3) * (q4 - q3));
-		double line3 = Math.sqrt((p6 - p5) * (p6 - p5) + (q6 - q5) * (q6 - q5));
 		System.out.println("Length of first line   = " + line1);
 		System.out.println("Length of second line   = " + line2);
-		System.out.println("Length of third line   = " + line3);
 
 		Double length1 = Double.valueOf(line1);
 		Double length2 = Double.valueOf(line2);
-		Double length3 = Double.valueOf(line3);
 
 		if (length1.equals(length2)) {
 			System.out.println("Lines 1 and 2 are Equal");
@@ -28,18 +23,12 @@ public class LineComparison {
 			System.out.println("Lines 1 and 2 are NOT Equal");
 		}
 
-		if (length2.equals(length3)) {
-			System.out.println("Line 2 and 3 are Equal");
+		if (length1.compareTo(length2) == 0) {
+			System.out.println("Line 1 and 2 are of the same length");
+		} else if (length1.compareTo(length2) > 0) {
+			System.out.println("Length of Line 1 is greater than Line 2");
 		} else {
-			System.out.println("Line 2 and 3 are NOT Equal");
-		}
-
-		if (length1.compareTo(length3) == 0) {
-			System.out.println("Line 1 and 3 are of the same length");
-		} else if (length1.compareTo(length3) > 0) {
-			System.out.println("Length of Line 1 is greater than Line 3");
-		} else {
-			System.out.println("Length of Line 1 is less than Line 3");
+			System.out.println("Length of Line 1 is less than Line 2");
 		}
 	}
 }
