@@ -11,9 +11,9 @@ public class LineComparison {
 		double p6 = 4.0, q6 = 12.0;
 
 		System.out.println("Welcome to Line Comparsion Computation Program on Main Branch");
-		double line1 = Math.sqrt((p2 - p1) * (p2 - p1) + (q2 - q1) * (q2 - q1));
-		double line2 = Math.sqrt((p4 - p3) * (p4 - p3) + (q4 - q3) * (q4 - q3));
-		double line3 = Math.sqrt((p6 - p5) * (p6 - p5) + (q6 - q5) * (q6 - q5));
+		double line1 = Math.sqrt(Math.pow((p2 - p1),2) + Math.pow((q2 - q1),2));
+		double line2 = Math.sqrt(Math.pow((p4 - p3),2) + Math.pow((q4 - q3),2));
+		double line3 = Math.sqrt(Math.pow((p6 - p5),2) + Math.pow((q6 - q5),2));
 		System.out.println("Length of first line   = " + line1);
 		System.out.println("Length of second line   = " + line2);
 		System.out.println("Length of third line   = " + line3);
