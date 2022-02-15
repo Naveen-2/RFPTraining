@@ -14,7 +14,7 @@ public class Employee {
 	int getWorkingDaysPerMonth(){
 		return WORKING_DAYS_PER_MONTH;
 	}
-	
+
 	int getTotalWorkingHours() {
 		return TOTAL_WORKING_HOURS;
 	}
