@@ -10,5 +10,8 @@ buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
+<<<<<<< HEAD
 *.class
 *.classpath
+=======
+>>>>>>> 9357cf7924d13707cbc79614c9f9312371e83af2
